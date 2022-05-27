@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE canciones[
+        <!ELEMENT canciones (cancion)>
+        <!ELEMENT cancion (titulo+, compositores*, discografica+, productores*, artistas*, caratula?, fecha_publicacion+)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT compositores (compositor*)>
+        <!ELEMENT compositor (nombre+, apellidos+)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT discografica (#PCDATA)>
+        <!ELEMENT productores (productor*)>
+        <!ELEMENT productor (nombre+, apellidos+)>
+        <!ELEMENT artistas (artista*)>
+        <!ELEMENT artista (#PCDATA)>
+        <!ELEMENT caratula (#PCDATA)>
+        <!ELEMENT fecha_publicacion (#PCDATA)>
+        <!ATTLIST cancion duracion CDATA #REQUIRED>
+        <!ATTLIST cancion anio CDATA #REQUIRED>
+        ]>
+<canciones>
+    <cancion duracion="3:40" anio="1979">
+        <titulo>Rock with you</titulo>
+        <compositores>
+            <compositor>
+                <nombre>Rod</nombre>
+                <apellidos>Temperton</apellidos>
+            </compositor>
+        </compositores>
+        <discografica>Epic</discografica>
+        <productores>
+            <productor>
+                <nombre>Quincy</nombre>
+                <apellidos>Jones</apellidos>
+            </productor>
+        </productores>
+        <artistas>
+            <artista>Michael Jackson</artista>
+        </artistas>
+        <fecha_publicacion>1992-23-12</fecha_publicacion>
+    </cancion>
+</canciones>

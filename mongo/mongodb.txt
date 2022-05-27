@@ -1,0 +1,8 @@
+use practica_01_db
+db.createCollection("productos")
+db.productos.insertOne({"referencia":"P0001", "tipo":"camisa", "paraHombre":true, "talla":"XS", "precio":20.99})
+db.productos.insertMany([{"referencia":"P0002", "tipo":"camisa", "paraHombre":true, "talla":"XL", "precio":30.25}, {"referencia":"P0003", "tipo":"pantalon", "paraHombre":true, "talla":"L", "precio":20.9}])
+show collections
+db.productos.find().pretty() 
+db.productos.deleteOne({"referencia":"P0001"})
+db.productos.deleteMany({$or:[{"referencia":"P0002"}, {"referencia":"P0003"}]})
